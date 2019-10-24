@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+  </configuration>
+  <import>
+    <widget-library name="../bin/Release/resolution_calc.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="1327 600">
+    <property name="MemberName" />
+    <property name="WidthRequest">900</property>
+    <property name="HeightRequest">400</property>
+    <property name="Title" translatable="yes">Resolution Calc</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <property name="Resizable">False</property>
+    <property name="AllowGrow">False</property>
+    <property name="DefaultWidth">1200</property>
+    <property name="DefaultHeight">600</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblResult">
+            <property name="MemberName" />
+            <property name="WidthRequest">400</property>
+            <property name="HeightRequest">100</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="X">39</property>
+            <property name="Y">186</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblRatioX">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">ratio x:</property>
+          </widget>
+          <packing>
+            <property name="X">15</property>
+            <property name="Y">89</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txtBoxRatioX">
+            <property name="MemberName" />
+            <property name="WidthRequest">50</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">67</property>
+            <property name="Y">79</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblRatioY">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">ratio y:</property>
+          </widget>
+          <packing>
+            <property name="X">150</property>
+            <property name="Y">86</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txtBoxRatioY">
+            <property name="MemberName" />
+            <property name="WidthRequest">50</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">204</property>
+            <property name="Y">80</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblResWidth">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">pixel width:</property>
+          </widget>
+          <packing>
+            <property name="X">299</property>
+            <property name="Y">87</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txtBoxResWidth">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">385</property>
+            <property name="Y">77</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnCalcResWidth">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Events">ButtonPressMask</property>
+            <property name="ExtensionEvents">All</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Calculate Width</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Pressed" handler="OnBtnCalcResWidthPressed" />
+          </widget>
+          <packing>
+            <property name="X">12</property>
+            <property name="Y">141</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnCalcRatio">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Calculate Ratio</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnCalcRatioClicked" />
+          </widget>
+          <packing>
+            <property name="X">202</property>
+            <property name="Y">139</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblResHeight">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">pixel height:</property>
+          </widget>
+          <packing>
+            <property name="X">598</property>
+            <property name="Y">85</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txtBoxResHeight">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">685</property>
+            <property name="Y">78</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblVersion">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">v. alpha 0.0</property>
+          </widget>
+          <packing>
+            <property name="X">768</property>
+            <property name="Y">288</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
